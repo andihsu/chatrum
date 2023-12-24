@@ -1,0 +1,9 @@
+{
+  "name": "andy's server.",
+  "port": 3000,
+  "code": "Interlinked",
+  "public": true, // This option decides whether user needs to register.
+  "share_files": true,
+  "max_request_time": 200,
+  "p2p": true // This option decides whether you need a server.
+}
