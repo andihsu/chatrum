@@ -6,7 +6,6 @@ pub mod init_config {
     pub struct Config {
         pub addr: String,
         pub name: String,
-        pub code: String,
         pub public: bool,
         pub share_files: bool,
         pub max_request_time: i64,
@@ -26,10 +25,8 @@ pub mod init_config {
         let parsed_config: Value = read_json(&config);
 
         let port = parsed_config["port"].clone().to_string();
-        let port = port;
         let addr = format!("0.0.0.0:{}", port);
         let name = parsed_config["name"].clone().to_string();
-        let code = parsed_config["code"].clone().to_string();
         let public = *&parsed_config["public"].as_bool().unwrap();
         let share_files = *&parsed_config["share_files"].as_bool().unwrap();
         let max_request_time = *&parsed_config["max_request_time"].as_i64().unwrap();
@@ -39,7 +36,6 @@ pub mod init_config {
         Config {
             addr,
             name,
-            code,
             public,
             share_files,
             max_request_time,
