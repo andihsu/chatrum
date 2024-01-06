@@ -1,7 +1,4 @@
 {
-  "name": "andy's server.",
-  "port": 3000,
-  "public": true,
-  "share_files": true,
-  "max_request_time": 200
+  "name": "andy",
+  "port": 3000
 }
